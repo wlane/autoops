@@ -42,7 +42,7 @@ print p.io_counters()
 print p.connections()
 print p.num_threads()
 
-p = psutil.Popen(["D:\Python27\python.exe","-c","print('hello')"],stdout=PIPE)  #跟踪程序运行的相关信息
+p = psutil.Popen(["D:\Python27\python.exe", "-c", "print('hello')"], stdout=PIPE)  #跟踪程序运行的相关信息
 print p.name()
 print p.username()
 print p.connections()
