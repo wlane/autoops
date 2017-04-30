@@ -1,5 +1,5 @@
 # This Python file uses the following encoding: utf-8
-
+#根据ip或者子网返回网络信息
 from IPy import IP
 
 ip_s = raw_input('please input an IP or net-range: ')
