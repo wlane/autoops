@@ -1,5 +1,5 @@
 # This Python file uses the following encoding: utf-8
-#比较两个文件的差异
+#比较两个文件内容的差异
 import difflib
 import sys
 
