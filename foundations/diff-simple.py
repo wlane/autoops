@@ -8,7 +8,7 @@ try:
     textfile2=sys.argv[2]
 except Exception,e:
     print "ERROR:"+str(e)
-    print "Usage: python diff-simple.py filename1 filename2"
+    print "Usage: python diff-simple.py filename1 filename2 > result.html"
     sys.exit()
 
 def readfile(filename):
@@ -22,12 +22,13 @@ def readfile(filename):
         sys.exit()
 
 if textfile1=="" or textfile2=="":
-    print "Usage:python diff-simple.py filename1 filename2"
+    print "Usage:python diff-simple.py filename1 filename2 > result.html"
     sys.exit()
 
 text1_lines = readfile(textfile1)
 text2_lines = readfile(textfile2)
 
 d = difflib.HtmlDiff()
-print d.make_file(text1_lines, text2_lines)
+print d.make_file(text1_lines, text2_lines) #HTML格式的输出结果
+
 
