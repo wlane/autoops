@@ -2,7 +2,7 @@
 
 import dns.resolver
 
-domaina =  raw_input('please input an domain: ')    #使用一级域名，如baidu.com
+domaina =  raw_input('please input an domain: ')    #最好使用一级域名，如baidu.com,使用二级域名就会报错，但是www.tvjoy.cn这种二级域名正常，可能和cname记录有关
 A = dns.resolver.query(domaina, 'A') #获取A记录
 print A.response
 print '\n'
