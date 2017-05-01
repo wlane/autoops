@@ -8,7 +8,7 @@ import filecmp
 a="E:\/test\/dir1"
 b="E:\/test\/dir2"
 
-print filecmp.cmp("E:\/test\/dir1\/f1.txt","E:\/test\/dir2\/f1.txt")    #默认比较文件内容???实际操作和书上不同
+print filecmp.cmp("E:\/test\/dir1\/f1.txt","E:\/test\/dir2\/f1.txt")    #默认比较文件内容，不看属性???实际操作和书上不同
 
 print filecmp.cmpfiles(a,b,['f1.txt','f2.txt','f3.txt','f4.txt','f5.txt'])
 print "\n"
