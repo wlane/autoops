@@ -5,8 +5,8 @@ import os
 import httplib
 
 iplist = []
-#appdomain = "www.tvjoy.cn"
-appdomain = "baidu.com"
+appdomain = "www.tvjoy.cn.ttt"
+#appdomain = "baidu.com"
 
 def get_iplist(domain=""):
     try:
@@ -27,14 +27,15 @@ def checkip(ip):
     try:
         conn.request("GET", "/", headers = {"Host": appdomain})     #发起url请求，添加host主机头
         r=conn.getresponse()
-        #getcontent = r.read(15)
-        getcontent = r.read(6)   #获取页面的前6个字符做校验
+        getcontent = r.read(15)
+        #getcontent = r.read(6)   #获取页面的前6个字符做校验
     finally:
-        #if getcontent=="<!DOCTYPE html>":
-        if getcontent == "<html>":
+        if getcontent=="<!DOCTYPE html>":
+        #if getcontent == "<html>":
             print ip+" [ok]"
         else:
             print ip+" [ERROR]"
+            #print getcontent
 
 if __name__=="__main__":
     if get_iplist(appdomain) and len(iplist)>0:

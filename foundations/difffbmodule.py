@@ -6,6 +6,7 @@ text1 = """text1:
 This module provides classes and functions for comparing sequences.
 """
 text1_lines = text1.splitlines()    #以行分割
+print text1_lines
 text2 = """text2:
 This module provides classes and functions for comparing sequences.
 """

@@ -22,3 +22,5 @@ server.connect(HOST,"25")
 server.login("xyf2424094@163.com","xyf5202520")
 server.sendmail(FROM, TO, BODY)
 server.quit()
+
+
